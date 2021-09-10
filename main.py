@@ -4,14 +4,12 @@ import pandas as pd
 
 # Load Spanish tokenizer, tagger, parser and NER
 nlp = spacy.load("es_core_news_lg")
-
+#Command line parcer settings
 parser = argparse.ArgumentParser(description='Text to Vocabulary - Spanish')
 parser.add_argument('infile', type=str, help='Input filename')
 parser.add_argument('outfile', type=str, help='Output filename')
-
 args = parser.parse_args()
 
-#print(args.infile)
 
 try:
     print("try to open '%s' file..."% args.infile, end =" ")
